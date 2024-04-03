@@ -1,3 +1,5 @@
+import { sanitizeHtml } from 'sanitize-html';
+
 ngAfterViewInit () {
     const products = this.productService.search('')
     const quantities = this.quantityService.getAll()
@@ -12,7 +14,7 @@ ngAfterViewInit () {
           deluxePrice: product.deluxePrice,
           id: product.id,
           image: product.image,
-          description: product.description
+          description: sanitizeHtml(product.description)
         })
       }
       for (const quantity of quantities) {
@@ -56,6 +58,6 @@ ngAfterViewInit () {
 
   encodeProductDescription (tableData: any[]) {
     for (let i = 0; i < tableData.length; i++) {
-      tableData[i].description = tableData[i].description.replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+      tableData[i].description = sanitizeHtml(tableData[i].description);
     }
   }
