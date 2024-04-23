@@ -13,6 +13,8 @@ class ErrorWithParent extends Error {
   parent: Error | undefined
 }
 
+// Comment for new commit
+
 // vuln-code-snippet start unionSqlInjectionChallenge dbSchemaChallenge
 module.exports = function searchProducts() {
   return (req: Request, res: Response, next: NextFunction) => {
