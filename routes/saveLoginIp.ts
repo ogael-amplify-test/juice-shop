@@ -39,5 +39,3 @@ module.exports = function saveLoginIp () {
     }
   }
 }
-
-// Comment. Remove later.
