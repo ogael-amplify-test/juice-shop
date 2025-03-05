@@ -19,6 +19,6 @@
                 - name: Checkout
                   uses: actions/checkout@v4
                 - name: Amplify Runner
-                  uses: amplify-security/runner-action@v0.1.0
+                  uses: amplify-security/runner-action@main
                   with:
                       amplify-endpoint: https://obviously-romantic-duck.ngrok-free.app
